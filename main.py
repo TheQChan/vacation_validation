@@ -2,18 +2,20 @@ from models import Employee
 from validator import validate_vacation
 
 if __name__ == "__main__":
-    existing = [
-        Employee(
-            1,
-            [
-                {"start_date": "01.06.2025", "end_date": "15.06.2025"},
-                {"start_date": "01.08.2025", "end_date": "14.08.2025"},
-            ],
-        ),
-        Employee(2, [{"start_date": "20.07.2025", "end_date": "31.07.2025"}]),
-    ]
-
     try:
+        existing = [
+            Employee(
+                1,
+                [
+                    {"start_date": "01.06.2025", "end_date": "15.06.2025"},
+                    {"start_date": "01.08.2025", "end_date": "14.08.2025"},
+                ],
+            ),
+            Employee(
+                2, [{"start_date": "01.07.2025", "end_date": "28.07.2025"}]
+            ),
+        ]
+
         new_schedule = Employee(
             3,
             [
